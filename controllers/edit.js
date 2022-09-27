@@ -11,7 +11,7 @@ module.exports = {
         const id = req.params.id
         TodoTask.findByIdAndRemove(id, err => {
             if (err) return res.status(500).send(err)
-            res.redirect('/')
+            res.redirect("/")
         })
     },
     updateTask: (req, res) => {
